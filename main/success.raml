@@ -3,24 +3,15 @@ body:
   application/json:
     example: |
       {
-        //Список регионов: array
-        "regions": [
+        //Список городов: array
+        "cities": [
           {
-            //Идентификатор региона: number
+            //Идентификатор города: number
             "id": 1,
-            //Имя региона: string
-            "name": "Красноярский край",
-            //Список городов: array
-            "cities": [
-              {
-                //Идентификатор города: number
-                "id": 1,
-                //Имя города: string
-                "name": "Красноярск",
-                //URL адрес сервера города: string
-                "host": "localhost:3000"
-              }
-            ]
+            //Имя города: string
+            "name": "Красноярск",
+            //URL адрес сервера города: string
+            "host": "localhost:3000"
           }
         ]
       }

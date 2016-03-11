@@ -8,6 +8,8 @@ documentation:
 baseUri: /
 
 /:
+  description: |
+    Получение информации о регионах/города/URL адресах серверов городов.
   get:
     description: |
       Получение информации о регионах/города/URL адресах серверов городов.
@@ -16,6 +18,8 @@ baseUri: /
       200: !include main/success.raml
       404: !include error/error.raml
 /categories:
+  description: |
+    Получение категорий/подкатегорий.
   get:
     description: |
       Получение категорий/подкатегорий.
