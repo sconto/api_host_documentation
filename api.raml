@@ -1,6 +1,6 @@
 #%RAML 0.8
-title: Хост сервер
-version: v1.0
+title: API хост сервера.
+version: v1.1.0
 documentation:
  - title: Документация API хост сервера
    content: |
@@ -8,6 +8,8 @@ documentation:
 baseUri: /
 
 /:
+  description: |
+    Получение информации о регионах/города/URL адресах серверов городов.
   get:
     description: |
       Получение информации о регионах/города/URL адресах серверов городов.
@@ -16,6 +18,8 @@ baseUri: /
       200: !include main/success.raml
       404: !include error/error.raml
 /categories:
+  description: |
+    Получение категорий/подкатегорий.
   get:
     description: |
       Получение категорий/подкатегорий.
