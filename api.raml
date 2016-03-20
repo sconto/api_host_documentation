@@ -17,13 +17,3 @@ baseUri: /
     responses:
       200: !include main/success.raml
       404: !include error/error.raml
-/categories:
-  description: |
-    Получение категорий/подкатегорий.
-  get:
-    description: |
-      Получение категорий/подкатегорий.
-    body: !include categories/request.raml
-    responses:
-      200: !include categories/success.raml
-      404: !include error/error.raml
