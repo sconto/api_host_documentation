@@ -1,6 +1,6 @@
 #%RAML 0.8
 title: API хост сервера.
-version: v1.1.0
+version: v2.0.0
 documentation:
  - title: Документация API хост сервера
    content: |
@@ -16,4 +16,15 @@ baseUri: /
     body: !include main/request.raml
     responses:
       200: !include main/success.raml
+      404: !include error/error.raml
+
+/host:
+  description: |
+    Получение информации о текущем городе по местоположению пользователя.
+  get:
+    description: |
+      Получение информации о текущем городе по местоположению пользователя.
+    body: !include host/request.raml
+    responses:
+      200: !include host/success.raml
       404: !include error/error.raml

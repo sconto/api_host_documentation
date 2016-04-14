@@ -142,9 +142,34 @@
       .list-group-item:hover {
         background-color: #f5f5f5;
       }
-    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>API хост сервера. API documentation <small>version v1.1.0</small></h1><p>/</p><h3 id="-------------API-------------"><a href="#-------------API-------------">Документация API хост сервера</a></h3><p>Полная документация API хост сервера</p></div><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">/</h3></div><div class="panel-body"><div class="top-resource-description"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_"><span class="parent"></span>/</a> <span class="methods"><a href="#_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_get"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_get_request" data-toggle="tab">Request</a></li><li><a href="#_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+    </style></head><body data-spy="scroll" data-target="#sidebar"><div class="container"><div class="row"><div class="col-md-9" role="main"><div class="page-header"><h1>API хост сервера. API documentation <small>version v2.0.0</small></h1><p>/</p><h3 id="-------------API-------------"><a href="#-------------API-------------">Документация API хост сервера</a></h3><p>Полная документация API хост сервера</p></div><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">/</h3></div><div class="panel-body"><div class="top-resource-description"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_"><span class="parent"></span>/</a> <span class="methods"><a href="#_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="_get"><div class="modal-dialog" style="width: 1100px"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/</h4></div><div class="modal-body"><div class="alert alert-info"><p>Получение информации о регионах/города/URL адресах серверов городов.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#_get_request" data-toggle="tab">Request</a></li><li><a href="#_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
 }
 </code></pre></div><div class="tab-pane" id="_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>Успешное выполнение запроса.</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  //Идентификатор города: number
+  "id": 1,
+  //Имя города: string
+  "name": "Красноярск",
+  //URL адрес сервера города: string
+  "host": "localhost:3000",
+  //Координаты центра города: object
+  "center":{
+      //Широта: number
+      "lat":56.0152834,
+      //Долгота: number
+      "lng":92.8932476
+    }
+}
+</code></pre><h2>HTTP status code <a href="http://httpstatus.es/404" target="_blank">404</a></h2><p>Выполнение запроса прошло с ошибкой. Коды ошибок: (10): Произошла ошибка сервера. (20): Отправлены некорректные данные.</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+  "error": {
+    //Код ошибки: number
+    "code": 20,
+    //Сообщение ошибки: string
+    "message": "Отправлены некорректные данные."
+    }
+}
+</code></pre></div></div></div></div></div></div></div></div></div></div><div class="panel panel-default"><div class="panel-heading"><h3 id="host" class="panel-title">/host</h3></div><div class="panel-body"><div class="top-resource-description"><p>Получение информации о текущем городе по местоположению пользователя.</p></div><div class="panel-group"><div class="panel panel-white"><div class="panel-heading"><h4 class="panel-title"><a class="collapsed" data-toggle="collapse" href="#panel_host"><span class="parent"></span>/host</a> <span class="methods"><a href="#host_get"><span class="badge badge_get">get</span></a></span></h4></div><div id="panel_host" class="panel-collapse collapse"><div class="panel-body"><div class="list-group"><div onclick="window.location.href = '#host_get'" class="list-group-item"><span class="badge badge_get">get</span><div class="method_description"><p>Получение информации о текущем городе по местоположению пользователя.</p></div><div class="clearfix"></div></div></div></div></div><div class="modal fade" tabindex="0" id="host_get"><div class="modal-dialog" style="width: 1100px"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title" id="myModalLabel"><span class="badge badge_get">get</span> <span class="parent"></span>/host</h4></div><div class="modal-body"><div class="alert alert-info"><p>Получение информации о текущем городе по местоположению пользователя.</p></div><ul class="nav nav-tabs"><li class="active"><a href="#host_get_request" data-toggle="tab">Request</a></li><li><a href="#host_get_response" data-toggle="tab">Response</a></li></ul><div class="tab-content"><div class="tab-pane active" id="host_get_request"><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
+}
+</code></pre></div><div class="tab-pane" id="host_get_response"><h2>HTTP status code <a href="http://httpstatus.es/200" target="_blank">200</a></h2><p>Успешное выполнение запроса.</p><h3>Body</h3><p><strong>Type: application/json</strong></p><p><strong>Example</strong>:</p><pre><code>{
   //Список городов: array
   "cities": [
     {
@@ -172,4 +197,4 @@
     "message": "Отправлены некорректные данные."
     }
 }
-</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#">/</a></li></ul></div></div></div></div></body></html>
+</code></pre></div></div></div></div></div></div></div></div></div></div></div><div class="col-md-3"><div id="sidebar" class="hidden-print affix" role="complementary"><ul class="nav nav-pills nav-stacked"><li><a href="#">/</a></li><li><a href="#host">/host</a></li></ul></div></div></div></div></body></html>
