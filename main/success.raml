@@ -3,17 +3,19 @@ body:
   application/json:
     example: |
       {
-        //Идентификатор города: number
-        "id": 1,
-        //Имя города: string
-        "name": "Красноярск",
-        //URL адрес сервера города: string
-        "host": "localhost:3000",
-        //Координаты центра города: object
-        "center":{
-            //Широта: number
-            "lat":56.0152834,
-            //Долгота: number
-            "lng":92.8932476
+       "cities": [
+          //Идентификатор города: number
+          "id": 1,
+          //Имя города: string
+          "name": "Красноярск",
+          //URL адрес сервера города: string
+          "host": "localhost:3000",
+          //Координаты центра города: object
+          "center":{
+              //Широта: number
+              "lat":56.0152834,
+              //Долгота: number
+              "lng":92.8932476
           }
+        ]
       }
